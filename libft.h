@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:46:26 by jcardina          #+#    #+#             */
-/*   Updated: 2023/01/20 14:31:39 by jcardina         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:29:38 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
-char 	*ft_strchr(const char *s, int c);
+char	*ft_strchr(const char *s, int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dst, const void *src, size_t len);
 
 #endif

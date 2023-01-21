@@ -1,4 +1,3 @@
-
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
@@ -7,13 +6,13 @@
 /*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:45:28 by jcardina          #+#    #+#             */
-/*   Updated: 2023/01/20 12:33:21 by jcardina         ###   ########.fr       */
+/*   Updated: 2023/01/21 15:26:49 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t destsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t destsize)
 {
 	size_t	i;
 	size_t	j;
