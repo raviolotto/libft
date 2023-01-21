@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   MAIN.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/20 10:41:19 by jcardina          #+#    #+#             */
-/*   Updated: 2023/01/21 17:12:46 by jcardina         ###   ########.fr       */
+/*   Created: 2023/01/21 17:04:52 by jcardina          #+#    #+#             */
+/*   Updated: 2023/01/21 17:10:52 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int main(int argc, char *argv)
 {
-	size_t	i;
-	char	*tmp;
-
-	i = 0;
-	tmp = (char *) s;
-	if (n == 0)
-		return ;
-	while (i < n)
-	{
-		tmp[i] = 0;
-		i++;
-	}
-	return ;
+	printf("%d",ft_memchr(argv[1], 43, 5));
 }

@@ -6,7 +6,7 @@
 /*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 14:24:31 by jcardina          #+#    #+#             */
-/*   Updated: 2023/01/21 15:25:44 by jcardina         ###   ########.fr       */
+/*   Updated: 2023/01/21 17:40:41 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)(s + i));
 		i++;
 	}
+	if (s[i] == c)
+		return ((char *)(s + i));
 	return (NULL);
 }
