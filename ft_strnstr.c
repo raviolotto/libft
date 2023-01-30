@@ -14,26 +14,26 @@
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strnstr(const char *big, const char *lit, size_t n)
 {
-	unsigned int	i;
-	unsigned char	*ptr1;
-	unsigned char	*ptr2;
+	size_t	i;
+	size_t	j;
 
-	ptr1 = (unsigned char *) s1;
-	ptr2 = (unsigned char *) s2;
+	if(!*lit || lit == NULL)
+		return ((char *) big);
+	if(!n)
+		return (0);
 	i = 0;
-	while ((ptr1[i] != '\0' || ptr2[i] != '\0') && i < n)
+	while(i < n && big[i])
 	{
-		if (ptr1[i] > ptr2[i])
+		j = 0;
+		while (big[i + j] == lit[j] && (i + j) < n)
 		{
-			return (1);
-		}
-		else if (ptr1[i] < ptr2[i])
-		{
-			return (-1);
+			if(lit[j + 1] == '\0')
+				return ((char*)big +i);
+			j++;
 		}
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
