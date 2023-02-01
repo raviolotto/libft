@@ -3,17 +3,19 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+         #
+#    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/01/21 18:38:46 by jcardina         ###   ########.fr        #
+#    Updated: 2023/02/01 16:59:21 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
 SRCS = \
+		ft_atoi.c \
 		ft_bzero.c \
+		ft_calloc.c \
 		ft_isalnum.c \
 		ft_isalpha.c \
 		ft_isascii.c \
@@ -25,6 +27,7 @@ SRCS = \
 		ft_memmove.c \
 		ft_memset.c \
 		ft_strchr.c \
+		ft_strdup.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strlen.c \

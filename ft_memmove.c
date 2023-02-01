@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:44:24 by jcardina          #+#    #+#             */
-/*   Updated: 2023/01/21 18:09:21 by jcardina         ###   ########.fr       */
+/*   Updated: 2023/02/01 16:09:48 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,13 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	tmp_dst = (char *) dst;
 	tmp_src = (const char *) src;
+	if(!dst && !src)
+		return 	(dst);
 	if (dst < src)
 	{
 		while (i < len)
 		{
-			((char *) dst)[i] = ((const char *) src)[i];
+			tmp_dst[i] = tmp_src[i];
 			i++;
 		}
 	}
