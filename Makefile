@@ -6,7 +6,7 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/02/02 17:30:30 by jacopo           ###   ########.fr        #
+#    Updated: 2023/02/06 17:20:34 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,11 +21,13 @@ SRCS = \
 		ft_isascii.c \
 		ft_isdigit.c \
 		ft_isprint.c \
+		ft_itoa.c \
 		ft_memchr.c \
 		ft_memcmp.c \
 		ft_memcpy.c \
 		ft_memmove.c \
 		ft_memset.c \
+		ft_split.c \
 		ft_strchr.c \
 		ft_strdup.c \
 		ft_strjoin.c \
@@ -35,6 +37,7 @@ SRCS = \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
+		ft_strtrim.c \
 		ft_substr.c \
 		ft_tolower.c \
 		ft_toupper.c \
