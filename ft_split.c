@@ -6,48 +6,59 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 11:32:18 by rowacopo          #+#    #+#             */
-/*   Updated: 2023/02/06 17:14:02 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/07 16:03:53 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    **ft_split(char const *s, char c)
+static size_t	ft_counter(const char *s, char c)
 {
-    int         row;
-    int         i;
-    char        **matrix;
-    char        *s_trim;
-    char const  *sep;
+	size_t	count;
+	size_t	i;
 
-    sep = &c;
-    row = 1;
-    i = -1;
-    s_trim = ft_strtrim(s, sep);
-    while(s_trim[++i] != '\0')
-        {
-            if(s_trim[i] == sep[0])
-                ++row;
-            while(s_trim[i] == sep[0])
-                i++;
-        }
-    free(s_trim);
-    matrix = malloc (sizeof(char *) * (row + 1));
-    if (!matrix)
+	i = 0;
+	count = 0;
+	while (s[i] == c)
+		i++;
+	while (s[i])
+	{
+		if (s[i] != c)
+		{
+			++count;
+			while (s[i] && s[i] != c)
+				++i;
+		}
+		else
+			i++;
+	}
+	return (count);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**matrix;
+	size_t	i;
+	size_t	j;
+
+	if (!s)
 		return (NULL);
-    i = 0;
-    while (*s)
+	i = 0;
+	matrix = malloc(sizeof(char *) * (ft_counter(s, c) + 1));
+	if (!matrix)
+		return (NULL);
+	while (*s)
 	{
 		if (*s != c)
 		{
-			row = 0;
-			while (*s && *s != c && ++row)
+			j = 0;
+			while (*s && *s != c && ++j)
 				++s;
-			matrix[i++] = ft_substr(s - row, 0, row);
+			matrix[i++] = ft_substr(s - j, 0, j);
 		}
 		else
 			++s;
 	}
-    matrix[i] = 0;
-    return(matrix);
+	matrix[i] = 0;
+	return (matrix);
 }

@@ -6,7 +6,7 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/02/06 17:20:34 by jacopo           ###   ########.fr        #
+#    Updated: 2023/02/07 16:01:53 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ SRCS = \
 		ft_strlcat.c \
 		ft_strlcpy.c \
 		ft_strlen.c \
+		ft_strmapi.c \
 		ft_strncmp.c \
 		ft_strnstr.c \
 		ft_strrchr.c \
