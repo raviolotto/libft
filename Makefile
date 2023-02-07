@@ -6,7 +6,7 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/02/07 16:01:53 by jacopo           ###   ########.fr        #
+#    Updated: 2023/02/07 16:51:20 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS = \
 		ft_split.c \
 		ft_strchr.c \
 		ft_strdup.c \
+		ft_striteri.c \
 		ft_strjoin.c \
 		ft_strlcat.c \
 		ft_strlcpy.c \

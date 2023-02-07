@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:46:26 by jcardina          #+#    #+#             */
-/*   Updated: 2023/02/07 16:01:42 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/07 16:50:45 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	*ft_memset(void *b, int c, size_t len);
 char    **ft_split(char const *s, char c);
 char	*ft_strchr(const char *s, int c);
 char    *ft_strdup(const char *s);
+void    ft_striteri(char *s, void (*f)(unsigned int, char*));
 char    *ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char *dst, const char *src, size_t destsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
