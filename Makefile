@@ -6,7 +6,7 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/02/08 17:12:20 by jacopo           ###   ########.fr        #
+#    Updated: 2023/02/13 12:54:01 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,7 +48,12 @@ SRCS = \
 		ft_tolower.c \
 		ft_toupper.c \
 
+BONUS = \
+		ft_lstnew.c \
+		
 OBJS = ${SRCS:%.c=%.o}
+
+OBJSPLUS = ${BONUS:%.c=%.o}
 
 FLAGS = -Wall -Wextra -Werror
 
@@ -57,6 +62,12 @@ all: ${NAME}
 ${NAME} :
 	gcc -c ${FLAGS} ${SRCS} -I.
 	ar rcs ${NAME} ${OBJS}
+
+bonus: ${NAME}
+
+${NAME} :
+	gcc -c ${FLAGS} ${SRCS} ${BONUS} -I.
+	ar rcs ${NAME} ${OBJS} ${OBJSPLUS}
 
 clean:
 	 rm  -f ${OBJS}
