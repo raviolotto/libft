@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/20 10:46:26 by jcardina          #+#    #+#             */
-/*   Updated: 2023/02/08 17:12:27 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/13 16:23:42 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,25 @@
 
 # include <stdio.h>
 # include <stdlib.h>
-# include <unistd.h> 
+# include <unistd.h>
+
+typedef struct s_list
+{
+    void            *content;
+    struct s_list   *next;
+} t_list;
 
 int     ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);
 void    *ft_calloc(size_t nmemb, size_t size);
-int		ft_isalnum(int c);
+int     ft_isalnum(int c);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+t_list  *ft_lstnew(void *content);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dst, const void *src, size_t n);

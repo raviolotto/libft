@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 12:48:42 by jacopo            #+#    #+#             */
-/*   Updated: 2023/01/30 15:48:14 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/14 11:42:46 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int ft_atoi(const char *str)
     int i;
     int sign;
     int result;
-    
+
     i = 0;
     while ((str[i] >= 9 && str[i] <= 13) || (str[i] == 32))
 		i++;

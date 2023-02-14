@@ -6,7 +6,7 @@
 #    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/02/13 12:54:01 by jacopo           ###   ########.fr        #
+#    Updated: 2023/02/14 11:31:15 by jacopo           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,29 +50,32 @@ SRCS = \
 
 BONUS = \
 		ft_lstnew.c \
-		
-OBJS = ${SRCS:%.c=%.o}
+		ft_lstadd_front.c\
 
-OBJSPLUS = ${BONUS:%.c=%.o}
+OBJS = ${SRCS:.c=.o}
+
+OBJSPLUS = ${BONUS:.c=.o}
+
+CC = gcc
+RM = rm -f
 
 FLAGS = -Wall -Wextra -Werror
 
+.c.o:
+	${CC} ${FLAGS} -g -c $< -o ${<:.c=.o}
+
 all: ${NAME}
 
-${NAME} :
-	gcc -c ${FLAGS} ${SRCS} -I.
+${NAME} : ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
-bonus: ${NAME}
-
-${NAME} :
-	gcc -c ${FLAGS} ${SRCS} ${BONUS} -I.
-	ar rcs ${NAME} ${OBJS} ${OBJSPLUS}
+bonus:	${OBJSPLUS}
+		ar rcs ${NAME} ${OBJSPLUS}
 
 clean:
-	 rm  -f ${OBJS}
+	${RM} ${OBJS} ${OBJSPLUS}
 
 fclean: clean
-	rm -f ${NAME}
+	${RM} ${NAME}
 
 re: fclean all
