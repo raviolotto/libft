@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 16:09:11 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/13 16:19:25 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/14 17:09:58 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (!lst)
-		return ;
-	if (*lst)
-		new->next = *lst;
+	new->next = *lst;
 	*lst = new;
 }
