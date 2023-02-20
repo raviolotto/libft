@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 21:05:46 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/15 21:11:53 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/20 14:14:37 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 	t_list	*tmp;
 
 	tmp = lst;
-	while(tmp)
+	while (tmp)
 	{
 		f(tmp->content);
 		tmp = tmp->next;

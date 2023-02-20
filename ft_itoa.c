@@ -6,13 +6,13 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/06 17:19:29 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/06 17:19:31 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/20 14:32:28 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_lenght(long nb)
+static	size_t	ft_lenght(long nb)
 {
 	size_t	count;
 

@@ -6,16 +6,16 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:19:35 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/08 15:48:04 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/20 14:19:25 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    size_t  size;
+	size_t	size;
 
-    size = ft_strlen(s);
-    write(fd, s, size);
+	size = ft_strlen(s);
+	write(fd, s, size);
 }

@@ -6,30 +6,29 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/02 18:06:31 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/02 18:54:01 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/20 14:27:33 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strtrim(char const *s1, char const *set)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-    int start;
-    int end;
-    char *news;
+	int		start;
+	int		end;
+	char	*news;
 
-    if (!s1 || !set)
+	if (!s1 || !set)
 		return (NULL);
-    start = 0;
-    end = ft_strlen(s1) - 1;
-    
-    while(start <= end &&ft_strchr(set, s1[start]) != NULL)
-        start++;
-    while(end >= start && ft_strchr(set, s1[end]) != NULL)
-        end--;
-    news = malloc (sizeof(char) * (end - start + 2));
-    if(!news)
-        return (NULL);
-    ft_strlcpy(news, s1 + start, (end - start + 2));
-    return(news);
+	start = 0;
+	end = ft_strlen(s1) - 1;
+	while (start <= end && ft_strchr(set, s1[start]) != NULL)
+		start++;
+	while (end >= start && ft_strchr(set, s1[end]) != NULL)
+		end--;
+	news = malloc (sizeof(char) * (end - start + 2));
+	if (!news)
+		return (NULL);
+	ft_strlcpy(news, s1 + start, (end - start + 2));
+	return (news);
 }

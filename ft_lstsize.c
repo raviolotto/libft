@@ -6,7 +6,7 @@
 /*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 12:48:02 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/14 13:31:57 by jacopo           ###   ########.fr       */
+/*   Updated: 2023/02/20 14:16:13 by jacopo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*tmp;
-	int	i;
+	int		i;
 
 	i = 0;
 	tmp = lst;
@@ -24,5 +24,5 @@ int	ft_lstsize(t_list *lst)
 		i++;
 		tmp = tmp->next;
 	}
-	return(i);
+	return (i);
 }
