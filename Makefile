@@ -3,17 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+         #
+#    By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/01/20 10:35:39 by jcardina          #+#    #+#              #
-#    Updated: 2023/02/15 22:13:25 by jacopo           ###   ########.fr        #
+#    Created: 2023/03/09 12:05:18 by jcardina          #+#    #+#              #
+#    Updated: 2023/03/28 17:33:06 by jcardina         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-SRCS = \
-		ft_atoi.c \
+SRCS =	ft_atoi.c \
 		ft_bzero.c \
 		ft_calloc.c \
 		ft_isalnum.c \
@@ -66,10 +65,10 @@ OBJSPLUS = ${BONUS:.c=.o}
 CC = gcc
 RM = rm -f
 
-FLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 .c.o:
-	${CC} ${FLAGS} -g -c $< -o ${<:.c=.o}
+	@${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
 
 all: ${NAME}
 

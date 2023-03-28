@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/08 15:19:35 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/20 14:19:25 by jacopo           ###   ########.fr       */
+/*   Created: 2023/03/09 12:09:08 by jcardina          #+#    #+#             */
+/*   Updated: 2023/03/09 12:09:10 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putstr_fd(char *s, int fd)
 {
 	size_t	size;
 
+	if (!s)
+		return ;
 	size = ft_strlen(s);
 	write(fd, s, size);
 }

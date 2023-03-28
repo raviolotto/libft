@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jacopo <jacopo@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jcardina <jcardina@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/14 18:02:27 by jacopo            #+#    #+#             */
-/*   Updated: 2023/02/20 14:14:28 by jacopo           ###   ########.fr       */
+/*   Created: 2023/03/09 12:06:49 by jcardina          #+#    #+#             */
+/*   Updated: 2023/03/09 12:06:51 by jcardina         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
+	if (!lst || !del)
+		return ;
 	while (*lst)
 	{
 		tmp = (*lst)->next;
